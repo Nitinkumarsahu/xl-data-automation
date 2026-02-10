@@ -1,0 +1,116 @@
+:root {
+  --bg: #f4f7fb;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.hero {
+  background: linear-gradient(120deg, #1d4ed8, #2563eb 50%, #3b82f6);
+  color: #fff;
+  padding: 4rem 1.25rem;
+}
+
+.hero__content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 { margin: 0 0 0.75rem; font-size: clamp(2rem, 4vw, 3rem); }
+.hero p { max-width: 700px; opacity: 0.95; }
+
+.container {
+  max-width: 1000px;
+  margin: -2rem auto 2rem;
+  padding: 0 1.25rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(13, 44, 92, 0.08);
+  padding: 1.25rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.file-drop {
+  display: block;
+  border: 2px dashed #93c5fd;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #eff6ff;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+}
+
+.file-drop input { display: none; }
+
+.selected-files {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+}
+
+.btn {
+  border: 0;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.65rem 1.1rem;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover { background: var(--primary-dark); }
+.btn--secondary { background: #0f172a; }
+.btn--small { padding: 0.45rem 0.8rem; font-size: 0.9rem; }
+
+.muted { color: var(--muted); }
+.alert { padding: 0.7rem 0.85rem; border-radius: 8px; margin-bottom: 1rem; }
+.alert--error { background: #fee2e2; color: #991b1b; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+th, td {
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.65rem 0.4rem;
+  font-size: 0.95rem;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.badge--success { background: #dcfce7; color: var(--success); }
+.badge--error { background: #fee2e2; color: var(--danger); }
